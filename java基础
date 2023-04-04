@@ -1,0 +1,126 @@
+
+
+
+
+# 1.数据类型和运算符
+
+# 2.判断与循环
+
+# 3.数组
+
+# 4.方法
+
+# 5.类和对象
+
+# 六.字符串
+
+### 1.String类
+
+表示字符串的类，定义了很多操作字符串的方法
+
+**equals() ** 方法 比较两个字符串是否一样
+
+```
+   String sb1 = "acd";
+        String sb2 = "acd";
+        String sb3 = "acd1";
+        if (sb1.equals(sb2)) {
+            System.out.println("相等");
+        }
+        if (sb1.equals(sb3)) {
+            System.out.println("相等");
+        } else {
+            System.out.println("不相等");
+        }
+```
+
+**length()** 方法  用于返回字符串的长度（即字符串中字符的个数）
+
+```
+String str = "Hello, world!";
+int len = str.length(); // 获取字符串的长度
+System.out.println(len); // 输出 13 （包括英文字符和一个空格字符）
+```
+
+**replace()** 方法 用于将字符串中指定的字符或字符序列替换为另一个字符或字符序列。
+
+```
+String str = "Hello, world!";
+String newStr = str.replace('o', 'a'); // 将字符串中的 'o' 替换成 'a'
+System.out.println(newStr); // 输出 "Hella, warld!"
+```
+
+**charAt()**   方法 表示要获取的字符的位置，从 0 开始计数。返回值为指定位置的字符。
+
+```
+String sb = "vbih";
+char a  = sb.charAt(2);
+System.out.println(a);//  结果：i
+```
+
+**substring()** 方法 指定开始位置和结束位置，可以获取字符串中的特定段落,包头不保尾。
+
+```
+String str = "Hello World";
+String subStr = str.substring(0, 5); // 截取 0 到 4 位置的子字符串
+System.out.println(subStr); // 输出 "Hello"
+```
+
+
+
+### 2. StingBuilder类
+
+StringBuilder 是一个可变字符串类，它允许我们对字符串执行插入、删除、替换、追加等操作，并将其转换为不可变字符串（String）。与字符串类（String）不同，StringBuilder 的实可以被修改而不需要创建新的实例，这在需要频繁地对字符串进行操作时非常有用，因为它避免了创建大量的临时字符串对象。StingBuilder的使用场景：字符串的拼接；字符串的反转
+
+StringBuilder 类提供了多种方法：
+
+**append()** 方法用于在字符串结尾处添加字符或字符串
+
+**insert()** 方法用于在指定位置插入字符或字符串
+
+**replace()** 方法用于替换指定位置的字符或字符串
+
+**delete()** 方法用于删除指定位置的字符或字符串
+
+**reverse()** 方法用于反转字符串
+
+**toString**()方法用于转化成字符串
+
+创建对象
+
+```java
+        //1.创建对象
+        StringBuilder sb = new StringBuilder("abc");
+        //2.append():添加字符串
+        sb = sb.append("def");
+        System.out.println(sb);
+        //3.reverse():反转字符串
+        sb = sb.reverse();
+        System.out.println(sb);
+        //4.lenght():获取长度
+        int num = sb.length();
+        System.out.println(num);
+        //5.toString():转化成字符串，sb不是字符串
+        String str = sb.toString();
+        System.out.println(str);
+
+```
+
+### 3.  StingBuilder类
+
+对间隔符号，始末符号插入方便
+
+```
+ 	    //1.创建对象
+        StringJoiner sj = new StringJoiner("*","(",")");
+        //2.添加元素
+        sj.add("123").add("abc").add("789");
+        System.out.println(sj);
+        //3.获取长度
+        int len = sj.length();
+        System.out.println(len);
+         //4.转化成字符串
+        String str = sj.toString();
+        System.out.println(str);
+```
+
